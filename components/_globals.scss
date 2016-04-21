@@ -1,0 +1,63 @@
+//-- Color configuration
+$color-divider: $viroolGray !default;
+$color-background: $color-white !default;
+$color-text: $viroolDarkGray !default;
+$color-text-secondary: $viroolDarkGray !default;
+
+$color-primary: $viroolBlue !default;
+$color-primary-dark: $viroolDarkGray !default;
+$color-accent: $viroolPink !default;
+$color-accent-dark: $viroolPinkHover !default;
+$color-primary-contrast: $color-white !default;
+$color-accent-contrast: $color-white !default;
+
+//-- Sizing
+$unit: 1rem !default;
+
+// -- Fonts
+$preferred-font: "Open Sans", "Helvetica", "Arial", sans-serif !default;
+$font-size: 1.6 * $unit !default;
+$font-size-tiny: 1.2 * $unit !default;
+$font-size-small: 1.4 * $unit !default;
+$font-size-normal: $font-size !default;
+$font-size-big: 1.8 * $unit !default;
+$font-weight-thin: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-semi-bold: 500 !default;
+$font-weight-bold: 700 !default;
+
+//-- Animation
+$animation-duration: .35s;
+$animation-delay: $animation-duration / 5;
+$animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1) !default;
+$animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1) !default;
+$animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1) !default;
+$animation-curve-default: $animation-curve-fast-out-slow-in !default;
+
+//-- Indexes
+$z-index-highest: 300 !default;
+$z-index-higher: 200 !default;
+$z-index-high: 100 !default;
+$z-index-normal: 1 !default;
+$z-index-low: -100 !default;
+$z-index-lower: -200 !default;
+
+// https://www.google.com/design/spec/layout/metrics-keylines.html#metrics-keylines-baseline-grids
+$baseline-grid: (0.8 * $unit) !default;
+$layout-gutter-width-sm: ($baseline-grid * 2) !default;
+$layout-gutter-width: ($baseline-grid * 3) !default;
+
+// https://www.google.com/design/spec/layout/responsive-ui.html#responsive-ui-breakpoints
+// 4 columns
+$layout-breakpoint-xxs: 480px !default;
+// 8 columns
+$layout-breakpoint-xs: 600px !default;
+// 12 columns
+$layout-breakpoint-sm-tablet: 720px !default;
+$layout-breakpoint-sm: 840px !default;
+$layout-breakpoint-md: 960px !default;
+$layout-breakpoint-lg-tablet: 1024px !default;
+$layout-breakpoint-lg: 1280px !default;
+$layout-breakpoint-xl: 1440px !default;
+$layout-breakpoint-xxl: 1600px !default;
+$layout-breakpoint-xxxl: 1920px !default;

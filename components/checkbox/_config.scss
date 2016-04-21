@@ -1,0 +1,18 @@
+$checkbox-color: $color-primary !default;
+$checkbox-border-color: $viroolGray;
+$checkbox-border-hover-color: $viroolLightBlue;
+$checkbox-border-active-color: $viroolBlue;
+$checkbox-background-color: $viroolLightGray;
+$checkbox-background-active-color: $viroolLightBlue;
+$checkbox-disabled-color: rgba($checkbox-border-color, 0.9) !default;
+
+
+$checkbox-field-padding: 9px !default;
+$checkbox-focus-checked-color: rgba($color-primary, 0.26) !default;
+$checkbox-size: 20px !default;
+$checkbox-focus-color: rgba($color-black, 0.1) !default;
+$checkbox-focus-size: $checkbox-size * 2.3 !default;
+$checkbox-text-color: $viroolDarkGray !default;
+$checkbox-text-font-size: $font-size-big !default;
+$checkbox-total-height: 1.8 * $unit !default;
+$checkbox-transition-duration: .2s !default;

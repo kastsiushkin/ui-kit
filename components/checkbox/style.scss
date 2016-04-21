@@ -1,0 +1,99 @@
+@import "../base";
+@import "./config";
+
+.Checkbox {
+  position: relative;
+  display: block;
+  padding: $checkbox-field-padding 0;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.Checkbox__text {
+  display: inline-block;
+  padding-left: $unit;
+  font-size: $checkbox-text-font-size;
+  line-height: $checkbox-size;
+  color: $checkbox-text-color;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.Checkbox__input {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.Check {
+  position: relative;
+  display: inline-block;
+  width: $checkbox-size;
+  height: $checkbox-size;
+  vertical-align: top;
+  cursor: pointer;
+  border-color: $checkbox-border-color;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px;
+  background-color: $checkbox-background-color;
+  transition-timing-function: $animation-curve-default;
+  transition-duration: $checkbox-transition-duration;
+  transition-property: background-color;
+  &:hover {
+    border-color: $checkbox-border-hover-color;
+  }
+  &:active  {
+    border-color: $checkbox-border-active-color;
+    background-color: $checkbox-background-active-color;
+  }
+  &.Check--checked {
+    background-color: $checkbox-color;
+    border-color: $checkbox-color;
+    &:after {
+      position: absolute;
+      content: "";
+      margin: 1px;
+      border-color: $color-background;
+      border-style: solid;
+      border-top: 0;
+      border-right-width: 2px;
+      border-bottom-width: 2px;
+      border-left: 0;
+      transform: rotate(45deg);
+      animation: checkmark-expand 140ms ease-out forwards;
+    }
+  }
+}
+
+.Checkbox--disabled {
+  > .Checkbox__text {
+    color: $checkbox-disabled-color;
+  }
+  > .Check {
+    cursor: auto;
+    border-color: $checkbox-disabled-color;
+    &.Check--checked {
+      cursor: auto;
+      background-color: $checkbox-disabled-color;
+      border-color: transparent;
+    }
+  }
+}
+
+@keyframes checkmark-expand {
+  0% {
+    top: .9 * $unit;
+    left: .6 * $unit;
+    width: 0;
+    height: 0;
+  }
+
+  100% {
+    top: -.1 * $unit;
+    left: .4 * $unit;
+    width: .7 * $unit;
+    height: 1.2 * $unit;
+  }
+}

@@ -1,0 +1,61 @@
+@import "../base";
+@import "../mixins";
+@import "./config";
+
+%button {
+  @include typo-button();
+  position: relative;
+  display: inline-block;
+  height: $button-height;
+  line-height: $button-height;
+  padding: $button-padding;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: $button-border-radius;
+  outline: none;
+  transition: background-color .3s $animation-curve-default,
+              color .3s $animation-curve-default,
+              border-color .3s $animation-curve-default;
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  &[disabled] {
+    background-color: $button-disabled-text-color;
+    pointer-events: none;
+    cursor: auto;
+  }
+}
+
+.Button {
+  @extend %button;
+}
+
+.Button--fullWidth {
+  width: 100%;
+}
+
+@include btn-colors('Button--primary',
+                    $button-primary-color-contrast,     //Color
+                    $button-primary-color,              //Background
+                    $button-primary-color-hover,        //Background:hover
+                    $button-primary-color-active,       //Background:active
+                    $button-primary-color,              //border
+                    $button-primary-color-hover,        //border:hover
+                    $button-primary-color-active);      //border:active
+@include btn-colors('Button--secondary',
+                    $button-secondary-color-contrast,
+                    $button-secondary-color,
+                    $button-secondary-color-hover,
+                    $button-secondary-color-active,
+                    $button-secondary-color-border,
+                    $button-secondary-color-border-hover,
+                    $button-secondary-color-border-active);

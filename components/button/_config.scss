@@ -1,0 +1,19 @@
+$button-height: 40px;
+$button-padding: 0 18px;
+$button-border-radius: 4px;
+
+$button-primary-color-contrast: $color-white !default;
+$button-primary-color-hover: $viroolBlueHover !default;
+$button-primary-color-active: $viroolBlueActive !default;
+$button-primary-color: $viroolBlue  !default;
+
+$button-secondary-color-contrast: $viroolBlue !default;
+$button-secondary-color-hover: $color-white !default;
+$button-secondary-color-active: $viroolSecondaryBlueActive !default;
+$button-secondary-color: $color-white  !default;
+$button-secondary-color-border: $viroolGray  !default;
+$button-secondary-color-border-hover: $viroolLightBlue  !default;
+$button-secondary-color-border-active: $viroolBlue  !default;
+
+$button-disabled-text-color: rgba($color-black, 0.26) !default;
+$button-disabled-background-color: rgba($color-black, 0.12) !default;

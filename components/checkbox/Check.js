@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
 import ClassNames from 'classnames';
+import {utils} from '../utils';
 import style from './style';
 
 const Check = ({checked, children, onMouseDown}) => {
-  const className = ClassNames(style.Check, {
-    [style['Check--checked']]: checked
+  const className = ClassNames(utils.pickClassName(style, 'Check'), {
+    [utils.pickClassName(style, 'Check--checked')]: checked
   });
 
   return <div onMouseDown={onMouseDown} className={className}>{children}</div>;

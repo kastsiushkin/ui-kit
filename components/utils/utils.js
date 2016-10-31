@@ -56,5 +56,9 @@ export default {
       return value ? 'on' : null;
     }
     return value;
+  },
+
+  pickClassName (style, name) {
+    return style[name] || name;
   }
 };

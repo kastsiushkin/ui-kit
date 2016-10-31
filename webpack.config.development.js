@@ -28,6 +28,7 @@ module.exports = {
         exclude: /(node_modules)/
       }, {
         test: /\.(scss|css)$/,
+        sasha: console.log(process.env.NODE_ENV),
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass?sourceMap')
       }
     ]

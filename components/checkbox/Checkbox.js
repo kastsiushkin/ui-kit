@@ -1,5 +1,6 @@
 import React from 'react';
 import ClassNames from 'classnames';
+import {utils} from '../utils';
 import Check from './Check';
 import style from './style';
 
@@ -26,22 +27,22 @@ class Checkbox extends React.Component {
 
   render () {
     const { onChange, ...others } = this.props; //eslint-disable-line no-unused-vars
-    const className = ClassNames(style.Checkbox, {
-      [style['Checkbox--disabled']]: this.props.disabled
+    const className = ClassNames(utils.pickClassName(style, 'Checkbox'), {
+      [utils.pickClassName(style, 'Checkbox--disabled')]: this.props.disabled
     }, this.props.className);
 
     return (
       <label className={className}>
         <input
           {...others}
-          className={style.Checkbox__input}
+          className={utils.pickClassName(style, 'Checkbox__input')}
           onClick={this.handleToggle}
           readOnly
           ref='input'
           type='checkbox'
         />
         <Check checked={this.props.checked} disabled={this.props.disabled}/>
-        {this.props.label ? <span data-react-toolbox='label' className={style.Checkbox__text}>{this.props.label}</span> : null}
+        {this.props.label ? <span data-react-toolbox='label' className={utils.pickClassName(style, 'Checkbox__text')}>{this.props.label}</span> : null}
       </label>
     );
   }

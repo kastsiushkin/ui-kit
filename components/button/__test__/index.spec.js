@@ -9,14 +9,12 @@ describe('Button', function () {
   describe('#render', function () {
     it('uses Button and Button--primary by default', function () {
       button = utils.shallowRenderComponent(Button);
-
       expect(button.props.className).toContain(style.Button);
       expect(button.props.className).toContain(style['Button--primary']);
     });
 
     it('renders Secondary button with Button--secondary style', function () {
       button = utils.shallowRenderComponent(Button, { secondary: true });
-
       expect(button.props.className).toContain(style.Button);
       expect(button.props.className).toContain(style['Button--secondary']);
     });

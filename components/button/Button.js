@@ -1,5 +1,6 @@
 import React from 'react';
 import ClassNames from 'classnames';
+import {utils} from '../utils';
 import style from './style';
 
 class Button extends React.Component {
@@ -16,18 +17,19 @@ class Button extends React.Component {
 
   static defaultProps = {
     className: '',
-    primary: true,
-    secondary: false
+    primary: false,
+    secondary: false,
+    fullWidth: false
   };
 
   render () {
     const { children, className, fullWidth, href, label, primary, secondary, ...others} = this.props;
     const element = href ? 'a' : 'button';
+    const type = primary ? 'primary' : secondary ? 'secondary' : 'primary';
 
-    const classes = ClassNames(style.Button, {
-      [style['Button--primary']]: primary,
-      [style['Button--secondary']]: secondary,
-      [style['Button--fullWidth']]: fullWidth
+    const classes = ClassNames(utils.pickClassName(style, 'Button'), {
+      [utils.pickClassName(style, `Button--${type}`)]: type,
+      [utils.pickClassName(style, 'Button--fullWidth')]: fullWidth
     }, className);
 
     const props = {

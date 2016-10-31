@@ -1,32 +1,23 @@
 {
-  "name": "react-toolbox",
+  "name": "virool-ui-kit",
   "description": "A set of React components implementing Google's Material Design specification with the power of CSS Modules.",
-  "homepage": "http://www.react-toolbox.com",
-  "version": "0.16.2",
+  "version": "0.0.2",
   "main": "./lib",
   "author": {
     "name": "React Toolbox Team",
-    "url": "http://github.com/react-toolbox"
+    "url": "https://github.com/kastsiushkin/ui-kit"
   },
   "contributors": [
     {
-      "name": "Javi Jimenez Villar",
-      "email": "javi.jimenez.villar@gmail.com",
-      "url": "http://soyjavi.com/"
-    },
-    {
-      "name": "Javi Velasco Arjona",
-      "email": "javier.velasco86@gmail.com",
-      "url": "http://javivelasco.com/"
+      "name": "Sasha Kastsiushkin"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-toolbox/react-toolbox.git"
+    "url": "git+https://github.com/kastsiushkin/ui-kit"
   },
   "bugs": {
-    "url": "https://github.com/react-toolbox/react-toolbox/issues",
-    "email": "issues@react-toolbox.com"
+    "url": "https://github.com/kastsiushkin/ui-kit/issues"
   },
   "keywords": [
     "components",
@@ -113,6 +104,7 @@
     "normalize.css": "^4.0.0",
     "react": "^0.14 || ^15.0.1",
     "react-addons-css-transition-group": "^0.14.0 || ^15.0.1",
-    "react-dom": "^0.14.0 || ^15.0.1"
+    "react-dom": "^0.14.0 || ^15.0.1",
+    "react-router": "^2.0.1"
   }
 }

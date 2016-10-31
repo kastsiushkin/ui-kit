@@ -1,21 +1,22 @@
 import React from 'react';
 import ClassNames from 'classnames';
+import {utils} from '../utils';
 import style from './style';
 
 const Header = (props) => {
-  const classNames = ClassNames(style.Header, {
+  const classNames = ClassNames(utils.pickClassName(style, 'Header'), {
   }, props.className);
 
   return (
     <header className={classNames}>
-      <div className={style.Header__container}>
-        <div className={style.Header__logoContainer}>
-          <div className={style.Header__logo}>
+      <div className={utils.pickClassName(style, 'Header__container')}>
+        <div className={utils.pickClassName(style, 'Header__logoContainer')}>
+          <div className={utils.pickClassName(style, 'Header__logo')}>
             <img src="./images/logo.png" />
           </div>
-          <span className={style.Header__title}>{props.title}</span>
+          <span className={utils.pickClassName(style, 'Header__title')}>{props.title}</span>
         </div>
-        <div className={style.Header__nav}>
+        <div className={utils.pickClassName(style, 'Header__nav')}>
           {props.children}
         </div>
       </div>

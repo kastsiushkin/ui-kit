@@ -108,10 +108,8 @@
 
 @mixin typo-menu {
   font-family: $preferred-font;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0;
 }
 
 @mixin typo-button {
